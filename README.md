@@ -78,5 +78,5 @@ You can predict the postoperative face using
 python scripts/fit/predict_face.py -cfg_file scripts/config/NICE_surgery.yaml -exp_name SURGERY_PREDICT_NAME -mode compress
 ```
 
-## Data and Code Availability
-The implementation code for NICE is included in the supplementary materials under the folder named `NICE`. However, due to the size limitations of supplementary materials and a data confidentiality agreement with the hospital, we can only provide a few demo cases. The complete dataset will be made publicly available after the paper is accepted.
+## Data Availability
+Due to the data confidentiality agreement with the hospital, we can only provide a few demo cases. The complete dataset will be made publicly available in the future.
