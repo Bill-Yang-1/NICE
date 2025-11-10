@@ -1,0 +1,64 @@
+ex_decoder:
+  decoder_hidden_dim: 512
+  decoder_lat_dim_id: 128
+  decoder_lat_dim_surgery: 256
+  decoder_mdb_hidden_dim: 512
+  decoder_mdb_nlayers: 8
+  decoder_mxl_hidden_dim: 512
+  decoder_mxl_nlayers: 8
+  decoder_nlayers: 6
+  decoder_sft_hidden_dim: 512
+  decoder_sft_nlayers: 8
+has_forward: true
+id_decoder:
+  decoder_lat_dim_glob: 64
+  decoder_lat_dim_loc: 32
+  decoder_hidden_dim: 200
+  decoder_nlayers: 4
+  decoder_nloc: 39
+  decoder_nsymm_pairs: 0
+  decoder_sft_lat_dim_glob: 64
+  decoder_sft_lat_dim_loc: 32
+  decoder_sft_hidden_dim: 200
+  decoder_sft_nlayers: 4
+  decoder_sft_nloc: 39
+  decoder_sft_nsymm_pairs: 0
+  decoder_mxl_lat_dim_glob: 64
+  decoder_mxl_lat_dim_loc: 64
+  decoder_mxl_hidden_dim: 400
+  decoder_mxl_nlayers: 4
+  decoder_mxl_nloc: 43
+  decoder_mxl_nsymm_pairs: 0
+  decoder_mdb_lat_dim_glob: 64
+  decoder_mdb_lat_dim_loc: 32
+  decoder_mdb_hidden_dim: 200
+  decoder_mdb_nlayers: 4
+  decoder_mdb_nloc: 16
+  decoder_mdb_nsymm_pairs: 0
+training:
+  batch_size: 1
+  ckpt_interval: 500
+  grad_clip: 0.025
+  grad_clip_lat: 0.025
+  lambdas:
+    lat_reg: 5.0e-05
+
+    landmarks: 0.0
+    sft_loss_corresp: 100.0
+    sft_loss_reg_zero: 5.0e-05
+
+    mxl_loss_corresp: 100.0
+    mxl_loss_reg_zero: 5.0e-05
+
+    mdb_loss_corresp: 100.0
+    mdb_loss_reg_zero: 5.0e-05
+
+  lr: 0.01
+  lr_decay_factor: 0.5
+  lr_decay_factor_lat: 0.5
+  lr_decay_interval: 200
+  lr_decay_interval_lat: 200
+  lr_lat: 0.01
+  npoints_decoder: 1000
+  sigma_near: 0.01
+  weight_decay: 0.0005
